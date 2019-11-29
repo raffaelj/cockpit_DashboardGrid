@@ -5,11 +5,13 @@
         @for($c = 1; $c <= $columns; $c++)
         <div class="uk-width-medium-1-{{$columns}}" data-area="bottom-{{$r}}-{{$c}}">
             <div class="uk-sortable uk-grid uk-grid-gutter uk-grid-width-1-1" data-uk-sortable="{group:'dashboard',animation:false}">
+              @if(isset($areas["bottom-{$r}-{$c}"]))
                 @foreach($areas["bottom-{$r}-{$c}"] as $widget)
                 <div data-widget="{{ $widget['name'] }}">
                     {{ $widget['content'] }}
                 </div>
                 @endforeach
+              @endif
             </div>
         </div>
         @endfor

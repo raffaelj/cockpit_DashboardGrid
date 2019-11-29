@@ -18,29 +18,35 @@
 
         <div class="uk-width-medium-1-2" data-area="main">
             <div class="uk-sortable uk-grid uk-grid-gutter uk-grid-width-1-1" data-uk-sortable="{group:'dashboard',animation:false}">
+              @if(isset($areas['main']))
                 @foreach($areas['main'] as $widget)
                 <div data-widget="{{ $widget['name'] }}">
                     {{ $widget['content'] }}
                 </div>
                 @endforeach
+              @endif
             </div>
         </div>
         <div class="uk-width-medium-1-4" data-area="aside-left">
             <div class="uk-sortable uk-grid uk-grid-gutter uk-grid-width-medium-1-1" data-uk-sortable="{group:'dashboard',animation:false}">
+              @if(isset($areas['aside-left']))
                 @foreach($areas['aside-left'] as $widget)
                 <div data-widget="{{ $widget['name'] }}">
                     {{ $widget['content'] }}
                 </div>
                 @endforeach
+              @endif
             </div>
         </div>
         <div class="uk-width-medium-1-4" data-area="aside-right">
             <div class="uk-sortable uk-grid uk-grid-gutter uk-grid-width-medium-1-1" data-uk-sortable="{group:'dashboard',animation:false}">
+              @if(isset($areas['aside-right']))
                 @foreach($areas['aside-right'] as $widget)
                 <div data-widget="{{ $widget['name'] }}">
                     {{ $widget['content'] }}
                 </div>
                 @endforeach
+              @endif
             </div>
         </div>
     </div>
@@ -55,12 +61,13 @@
 
                 <div class="uk-width-9-10">
                     <div class="uk-sortable uk-grid uk-grid-gutter uk-width-1-1 uk-grid-width-medium-1-3 uk-grid-width-large-1-5" data-uk-sortable="{group:'dashboard',animation:false}">
-
+                      @if(isset($areas['trash']))
                         @foreach($areas['trash'] as $widget)
                         <div data-widget="{{ $widget['name'] }}">
                             {{ $widget['content'] }}
                         </div>
                         @endforeach
+                      @endif
                     </div>
                 </div>
 
