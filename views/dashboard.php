@@ -14,7 +14,7 @@
 
     <div class="uk-grid uk-margin" data-uk-grid-margin>
 
-        @trigger('admin.dashboardgrid.widgets.top', compact('widgets', 'areas'))
+        @trigger('admin.dashboardgrid.widgets.top', compact('areas'))
 
         <div class="uk-width-medium-1-2" data-area="main">
             <div class="uk-sortable uk-grid uk-grid-gutter uk-grid-width-1-1" data-uk-sortable="{group:'dashboard',animation:false,handleClass:'dashboard-handle'}">
@@ -54,7 +54,7 @@
         </div>
     </div>
 
-    @trigger('admin.dashboardgrid.widgets.bottom', compact('widgets', 'areas'))
+    @trigger('admin.dashboardgrid.widgets.bottom', compact('areas'))
 
     <div class="uk-grid uk-margin" data-uk-grid-margin>
 

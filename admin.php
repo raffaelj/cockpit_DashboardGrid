@@ -16,22 +16,22 @@ $this->on('admin.init', function() {
     });
 
     // add top area
-    $this->on('admin.dashboardgrid.widgets.top', function($widgets, $areas) {
+    $this->on('admin.dashboardgrid.widgets.top', function($areas) {
 
         $rows    = $this->retrieve('dashboardgrid/top/rows',    1);
         $columns = $this->retrieve('dashboardgrid/top/columns', 2);
         
-        $this->renderView('dashboardgrid:views/dashboard_top.php', compact('areas', 'widgets', 'rows', 'columns'));
+        $this->renderView('dashboardgrid:views/dashboard_top.php', compact('areas', 'rows', 'columns'));
 
     }, 100);
 
     // add bottom area
-    $this->on('admin.dashboardgrid.widgets.bottom', function($widgets, $areas) {
+    $this->on('admin.dashboardgrid.widgets.bottom', function($areas) {
 
         $rows    = $this->retrieve('dashboardgrid/bottom/rows',    1);
         $columns = $this->retrieve('dashboardgrid/bottom/columns', 6);
         
-        $this->renderView('dashboardgrid:views/dashboard_bottom.php', compact('areas', 'widgets', 'rows', 'columns'));
+        $this->renderView('dashboardgrid:views/dashboard_bottom.php', compact('areas', 'rows', 'columns'));
 
     }, 100);
 
