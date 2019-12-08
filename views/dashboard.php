@@ -67,6 +67,7 @@
                       @if(isset($areas['trash']))
                         @foreach($areas['trash'] as $widget)
                         <div data-widget="{{ $widget['name'] }}">
+                            <i class="dashboard-handle uk-icon-arrows"></i>
                             {{ $widget['content'] }}
                         </div>
                         @endforeach
