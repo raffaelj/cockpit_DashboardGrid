@@ -41,15 +41,15 @@ $this->on('admin.init', function() {
         $columns = $this->retrieve('dashboardgrid/widgets/modules/columns', 2);
 
         $widgets[] = [
-            'name'    => 'modules',
-            'content' => $this->view('dashboardgrid:views/widgets/modules.php', compact('columns')),
-            'area'    => 'main'
+            'name'    => 'welcome',
+            'content' => $this->view('dashboardgrid:views/widgets/welcome.php'),
+            'area'    => 'aside-right'
         ];
 
         $widgets[] = [
-            'name'    => 'welcome',
-            'content' => $this->view('dashboardgrid:views/widgets/welcome.php'),
-            'area'    => 'main'
+            'name'    => 'modules',
+            'content' => $this->view('dashboardgrid:views/widgets/modules.php', compact('columns')),
+            'area'    => 'aside-right'
         ];
 
     }, 100);
